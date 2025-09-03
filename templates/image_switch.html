@@ -1,0 +1,19 @@
+{% if weather_condition.lower() == 'clear sky' %}
+    <img class="icon" src="../static/images/clear-sky_6581533.png" alt="clear sky"/>
+{% elif weather_condition.lower() in ['rain', 'light rain'] %}
+    <img class="icon" src="../static/images/rain_4834677.png" alt="rain"/>
+{% elif weather_condition.lower() == 'shower rain' %}
+    <img class="icon" src="../static/images/rain_1135680.png" alt="shower rain"/>
+{% elif weather_condition.lower() == 'thunderstorm' %}
+    <img class="icon" src="../static/images/storm_4165661.png" alt="thunderstorm"/>
+{% elif weather_condition.lower() == 'snow' %}
+    <img class="icon" src="../static/images/snow_9218615.png" alt="snow"/>
+{% elif weather_condition.lower() == 'mist' %}
+    <img class="icon" src="../static/images/mist_3313998.png" alt="mist"/>
+{% elif weather_condition.lower() in ['few clouds', 'overcast clouds'] %}
+    <img class="icon" src="../static/images/clouds_18385652.png" alt="few clouds"/>
+{% elif weather_condition.lower() == 'scattered clouds' %}
+    <img class="icon" src="../static/images/cloudy_8047177.png" alt="scattered clouds"/>
+{% elif weather_condition.lower() == 'broken clouds' %}
+    <img class="icon" src="../static/images/dust_12390358.png" alt="broken clouds"/>
+{% endif %}

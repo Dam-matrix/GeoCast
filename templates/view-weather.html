@@ -1,0 +1,25 @@
+{% include 'header.html' %}
+
+    <div class="weather-card py-5 text-center rounded-3">
+        <p class="text-body-emphasis col-lg-8 mx-auto fs-5 mb-4">
+            {{ city }}, {{ country }} | {{ date }}
+        </p>
+        <h3>Your current weather</h3>
+        <div class="weather">
+            {% include 'image_switch.html' %}
+            <h1 class="text-body-emphasis mb-3">{{ weather_condition }}</h1>
+        </div>
+        <div class="info col-12 d-inline-flex gap-4 text-muted">
+            <p>Temp: {{ temperature }}°C</p>
+            <p>Wind: {{ wind }}m/s</p>
+        </div>
+        <div class="info col-12 d-inline-flex gap-4 text-muted">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6M6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13" />
+                </svg> {{ humidity }}%</p>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
